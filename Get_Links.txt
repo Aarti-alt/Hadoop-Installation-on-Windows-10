@@ -1,4 +1,4 @@
-#Video links that has been used to Install WSL and HADOOP.
+#links that has been used to Install WSL and HADOOP.
 
 - FOR WSL :
 https://www.youtube.com/watch?v=IL7Jd9rjgrM
