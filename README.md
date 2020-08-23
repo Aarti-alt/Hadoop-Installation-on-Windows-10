@@ -11,3 +11,18 @@
   You can follow videos and links that I have used to install hadoop on WSL. (for same links have been provided in Get_Links.txt file)
 # For handling errors while ssh (secure shell) to localhost
   follow commands provided in ssh_error_handling.txt
+  
+# links that has been used to Install WSL and HADOOP.
+
+- FOR WSL :
+https://www.youtube.com/watch?v=IL7Jd9rjgrM
+
+- FOR HADOOP ON WSL-UBUNTU:
+https://www.youtube.com/watch?v=ieeCyhQ2PPM 
+http://cloudyrathor.com/hadoop-installation-guide-step-by-step/
+http://cloudyrathor.com/hadoop-installation-configuration/
+https://phoenixnap.com/kb/install-hadoop-ubuntu
+https://hadoop.apache.org/docs/r3.1.1/hadoop-project-dist/hadoop-hdfs/Federation.html
+
+- To install Hadoop on UBUNTU: 
+https://www.youtube.com/watch?v=KEKux4K5dDM&t=154s
