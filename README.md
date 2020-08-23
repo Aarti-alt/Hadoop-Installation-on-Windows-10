@@ -9,5 +9,5 @@
 # Installing Hadoop on WSL/Windows10 
   Follow commands provided in Hadoop_installation_wsl.txt file to install hadoop on WSL.
   You can follow videos and links that I have used to install hadoop on WSL. (for same links have been provided in Get_Links.txt file)
-# ssh (secure shell) to localhost
+# For handling errors while ssh (secure shell) to localhost
   follow commands provided in ssh_error_handling.txt
