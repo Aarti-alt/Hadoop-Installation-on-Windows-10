@@ -280,5 +280,8 @@ sudo service ssh restart
 ssh localhost
 
 
+# Further follow Get_Links.txt file to see links that has been used for installing WSL and Hadoop.
+
+
 
 
