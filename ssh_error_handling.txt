@@ -7,7 +7,7 @@ sudo nano /etc/ssh/sshd_config
 
 - Delete the file content
 
-- copy paste the below commands inside square bracket.
+- copy paste the below commands inside square bracket or use ssh_config.txt file content.
 
 [
 
