@@ -269,18 +269,7 @@ http://localhost:8088
 Conclusion
 You have successfully installed Hadoop on Ubuntu and deployed it in a pseudo-distributed mode.
 
-# when you start hadoop on your system.
 
-- First 
--restart ssh:
-sudo service ssh restart
-
--Second
--Verify everything is set up correctly by using the hdoop user to SSH to localhost:
-ssh localhost
-
-
-# Further follow Get_Links.txt file to see links that has been used for installing WSL and Hadoop.
 
 
 
