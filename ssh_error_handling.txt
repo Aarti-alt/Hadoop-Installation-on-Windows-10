@@ -1,4 +1,4 @@
-# ssh error handling
+# ssh error handling - Follow the below codes if you encounter error connecting ssh to localhost
 
 #ERROR-1: port-22 - connection refused
 
