@@ -43,7 +43,7 @@ chmod 0600 ~/.ssh/authorized_keys
 -Verify everything is set up correctly by using the hdoop user to SSH to localhost:
 ssh localhost
 
-# if you face error in ssh please view error handlig file. 
+# if you face error in ssh please view ssh error handling file. 
 
 #Download and Install Hadoop on Ubuntu
 
