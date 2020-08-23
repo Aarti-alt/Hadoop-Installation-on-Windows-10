@@ -4,19 +4,15 @@
  
  # Prerequisite
  Install WSL (Windows Subsystem for linux) to install Ubuntu on your base Windows system 
- ( follow the link provided in Get_Links.txt file to install WSL )
+ Follow the link provided below to install:
+ https://www.youtube.com/watch?v=IL7Jd9rjgrM
  
 # Installing Hadoop on WSL/Windows10 
-  Follow commands provided in Hadoop_installation_wsl.txt file to install hadoop on WSL.
-  You can follow videos and links that I have used to install hadoop on WSL. (for same links have been provided in Get_Links.txt file)
-# For handling errors while ssh (secure shell) to localhost
-  follow commands provided in ssh_error_handling.txt
+  Follow commands provided in Hadoop_installation_wsl.txt file to install hadoop on WSL. 
+  You can even follow videos and links that I have used to install hadoop on WSL. 
+  Using these links only I have installed Hadoop on my Windows10 and created the above file for use.
   
 # links that has been used to Install WSL and HADOOP.
-
-- FOR WSL :
-https://www.youtube.com/watch?v=IL7Jd9rjgrM
-
 - FOR HADOOP ON WSL-UBUNTU:
 https://www.youtube.com/watch?v=ieeCyhQ2PPM 
 http://cloudyrathor.com/hadoop-installation-guide-step-by-step/
@@ -26,3 +22,6 @@ https://hadoop.apache.org/docs/r3.1.1/hadoop-project-dist/hadoop-hdfs/Federation
 
 - To install Hadoop on UBUNTU: 
 https://www.youtube.com/watch?v=KEKux4K5dDM&t=154s
+
+# For handling errors while ssh (secure shell) to localhost
+  follow commands provided in ssh_error_handling.txt
