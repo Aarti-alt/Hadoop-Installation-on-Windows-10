@@ -12,7 +12,7 @@
   You can even follow videos and links that I have used to install hadoop on WSL. 
   Using these links only I have installed Hadoop on my Windows10 and created the above file for use.
   
-# links that has been used to Install WSL and HADOOP.
+# links that has been used to Install HADOOP.
 - FOR HADOOP ON WSL-UBUNTU:
 https://www.youtube.com/watch?v=ieeCyhQ2PPM 
 http://cloudyrathor.com/hadoop-installation-guide-step-by-step/
