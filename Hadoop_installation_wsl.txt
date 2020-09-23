@@ -13,13 +13,14 @@ java -version; javac -version
 -check environment
 echo $JAVA_HOME
 
--set environment if not set
+-set environment if not set 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-#Set Up a Non-Root User for Hadoop Environment
-
-- Install OpenSSH on Ubuntu
-sudo apt install openssh-server openssh-client -y
+- add above command to bashrc
+type - nano ~/.bashrc
+add command at the end
+do ctrl+s and to exit ctrl+x
+now type- source ~/.bashrc (to update changes)
 
 -Create Hadoop User
 sudo addgroup hadoop
@@ -28,6 +29,11 @@ set password
 
 - add hadoopusr to the sudo group
 sudo adduser hadoopusr sudo
+
+#Set Up a Non-Root User for Hadoop Environment
+
+- Install OpenSSH on Ubuntu
+sudo apt install openssh-server openssh-client -y
 
 -login to hadoopuser
 su hadoopusr(username)
