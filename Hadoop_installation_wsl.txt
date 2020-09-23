@@ -22,8 +22,12 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 sudo apt install openssh-server openssh-client -y
 
 -Create Hadoop User
-sudo adduser hdoop
-set password or you can leave it blank
+sudo addgroup hadoop
+sudo adduser hadoop hadoopusr
+set password 
+
+- add hadoopusr to the sudo group
+sudo adduser hadoopusr sudo
 
 -login to hadoopuser
 su hadoopusr(username)
