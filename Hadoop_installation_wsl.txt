@@ -24,7 +24,7 @@ now type- source ~/.bashrc (to update changes)
 
 -Create Hadoop User
 sudo addgroup hadoop
-sudo adduser hadoop hadoopusr
+sudo adduser --ingroup hadoop hadoopusr
 set password 
 
 - add hadoopusr to the sudo group
@@ -36,24 +36,27 @@ sudo adduser hadoopusr sudo
 sudo apt install openssh-server openssh-client -y
 
 -login to hadoopuser
-su hadoopusr(username)
+su - hadoopusr
 type password if any
 
 #Enable Passwordless SSH for Hadoop User
 
 -Generate an SSH key pair and define the location is is to be stored in:
-ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+ssh-keygen 
+press enter
 
 -Use the cat command to store the public key as authorized_keys in the ssh directory:
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
-
--Set the permissions for your user with the chmod command:
-chmod 0600 ~/.ssh/authorized_keys
+cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
 -Verify everything is set up correctly by using the hdoop user to SSH to localhost:
 ssh localhost
 
+- restart sysytem
+
 # if you face error in ssh please view ssh error handling file. 
+
+-exit from hadoop.
+exit
 
 #Download and Install Hadoop on Ubuntu
 
@@ -78,6 +81,10 @@ sudo mv hadoop-3.2.1(specify your directory) /usr/local/hadoop
 
 -Now give folder ownership to hadoop user
 sudo chown -R hadoopusr /usr/local
+
+Now login to hadoopusr-
+su hadoopusr
+password:
 
 #Single Node Hadoop Deployment (Pseudo-Distributed Mode)
 
@@ -105,6 +112,7 @@ export YARN_HOME=$HADOOP_HOME
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/native"
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
 
 Once you add the variables, save and exit the .bashrc file.(use ctrl+s to save and ctrl+x to exit)
 
@@ -126,6 +134,8 @@ sudo nano $HADOOP_HOME/etc/hadoop/hadoop-env.sh
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 
 
 (The path needs to match the location of the Java installation on your system)
+
+- Do give a check for your java version once.
 
 If you need help to locate the correct Java path, run the following command in your terminal window:
 which java
