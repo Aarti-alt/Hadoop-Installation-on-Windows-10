@@ -160,7 +160,24 @@ sudo service ssh status
 - another way to test:
 ssh localhost
 
-#ERROR-3: Could not load host key
+
+#ERROR-3
+- if error looks like-
+/etc/ssh/sshd_config line 17: Deprecated option KeyRegenerationInterval
+/etc/ssh/sshd_config line 18: Deprecated option ServerKeyBits
+/etc/ssh/sshd_config line 29: Deprecated option RSAAuthentication
+/etc/ssh/sshd_config line 36: Deprecated option RhostsRSAAuthentication
+
+- then do:
+sudo sed -i '/KeyRegenerationInterval/d' /etc/ssh/sshd_config
+sudo sed -i '/ServerKeyBits/d' /etc/ssh/sshd_config
+sudo sed -i '/RSAAuthentication/d' /etc/ssh/sshd_config
+sudo sed -i '/RhostsRSAAuthentication/d' /etc/ssh/sshd_config
+sudo sed -i '/UsePrivilegeSeparation/d' /etc/ssh/sshd_config
+
+- Then regenerate ssh keys.
+
+#ERROR-4: Could not load host key
 
 -run the below commands
 
@@ -169,14 +186,16 @@ ssh localhost
 
 OR use:
 
-ssh-keygen -b 1024 -t rsa -f /etc/ssh/ssh_host_key
-ssh-keygen -b 1024 -t rsa -f /etc/ssh/ssh_host_rsa_key
-ssh-keygen -b 1024 -t dsa -f /etc/ssh/ssh_host_dsa_key
-ssh-keygen -b 1024 -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key
-ssh-keygen -b 1024 -t ed25519 -f /etc/ssh/ssh_host_ed25519 _key
+sudo ssh-keygen -b 1024 -t rsa -f /etc/ssh/ssh_host_key
+sudo sh-keygen -b 1024 -t rsa -f /etc/ssh/ssh_host_rsa_key
+sudo ssh-keygen -b 1024 -t dsa -f /etc/ssh/ssh_host_dsa_key
+sudo ssh-keygen -b 521 -t ecdsa -f /etc/ssh/ssh_host_ecdsa_key
+sudo ssh-keygen -b 1024 -t ed25519 -f /etc/ssh/ssh_host_ed25519 _key
 
 sudo service ssh restart
 ssh localhost
+
+
 
 
 after establishing connection to ssh run the below commands again-
