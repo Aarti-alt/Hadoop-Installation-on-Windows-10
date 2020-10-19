@@ -42,16 +42,24 @@ type password if any
 #Enable Passwordless SSH for Hadoop User
 
 -Generate an SSH key pair and define the location is is to be stored in:
+
 ssh-keygen 
+OR
+ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 press enter
 
 -Use the cat command to store the public key as authorized_keys in the ssh directory:
 cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 
+-Set the permissions for your user with the chmod command:
+chmod 0600 ~/.ssh/authorized_keys
+
 -Verify everything is set up correctly by using the hdoop user to SSH to localhost:
+sudo service ssh restart
+sudo service ssh status 
+ - result- sshd is running
 ssh localhost
 
-- restart sysytem
 
 # if you face error in ssh please view ssh error handling file. 
 
@@ -258,12 +266,12 @@ $HADOOP_HOME/bin/hdfs namenode -format
 The shutdown notification signifies the end of the NameNode format process.
 
 2. Start Hadoop Cluster
-$HADOOP_HOME/sbin/start -dfs.sh
+$HADOOP_HOME/sbin/start-dfs.sh
 
 This starts namenode, datanode and secondary namenode.
 
 3. Start YARN
-$HADOOP_HOME/sbin/start -yarn.sh
+$HADOOP_HOME/sbin/start-yarn.sh
 
 This starts resourcemanager and nodemanager.
 
